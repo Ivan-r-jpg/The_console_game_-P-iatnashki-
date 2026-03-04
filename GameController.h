@@ -1,10 +1,22 @@
-#pragma once
+#pragma once 
+#include "GameField.h" // Підключення заголовочного файлу для роботи з ігровим полем
 
-#define MIN_BOARD_SIZE 3
-#define MAX_BOARD_SIZE 8
+#define MIN_BOARD_SIZE 3 // Мінімальний розмір ігрового поля
+#define MAX_BOARD_SIZE 9 // Максимальний розмір ігрового поля
 
 // Структура для керування ігровим процесом
 struct GameController
 {
-
+	GameField field; // Змінна, що зберігає всі елементи стурктури GameField
+	int moveCount; // Змінна для підрахунку кількості ходів, зроблених гравцем
+	void StartGame() // Прототип функції для початку гри
+	{
+	}
+	int InputControling() // Прототип функції для обробки введення користувача
+	{
+		return 0;
+	}
+	void GameLoop() // Прототип функції для основного циклу гри, де відбувається логіка гри
+	{
+	}
 };
