@@ -21,15 +21,9 @@ struct GameField
 
 	void PrintField(); // Прототип функції для виведення ігрового поля на екран
 	
-	bool IsCorrectMove(int x, int y) // Прототип функції для перевірки можливості ходу
-	{
-		return true;
-	}
-	void MakeMove(int i, int j) // Прототип функції для виконання ходу
-	{
-	}
-	bool IsGameOver() // Прототип функції для перевірки умвои завершення гри
-	{
-		return false;
-	}
+	bool IsCorrectMove(int x, int y); // Прототип функції для перевірки можливості ходу
+	
+	bool MakeMove(int number); // Прототип функції для виконання ходу
+	
+	bool IsGameOver(); // Прототип функції для перевірки умови завершення гри
 };
