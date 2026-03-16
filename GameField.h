@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream> // Підключення стандартної бібліотеки для вводу/виводу
 
 // Структура для зберігання стану ігрового поля
 struct GameField 
@@ -18,12 +19,13 @@ struct GameField
 	} status;
 
 	void InitialField(int size); // Прототип функції для ініціалізації ігрового поля
-
-	void PrintField(); // Прототип функції для виведення ігрового поля на екран
 	
 	bool IsCorrectMove(int x, int y); // Прототип функції для перевірки можливості ходу
 	
-	bool MakeMove(int number); // Прототип функції для виконання ходу
+	bool operator+=(int number); // Прототип перевизначення оператора += для виконання ходу 
 	
 	bool IsGameOver(); // Прототип функції для перевірки умови завершення гри
+
 };
+
+std::ostream& operator<<(std::ostream& out, const GameField& var); // Перевизначення оператора виводу (бінарного зсуву) для зручного виведення стану ігрового поля на екран
